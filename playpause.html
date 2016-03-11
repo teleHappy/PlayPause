@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Play|Pause</title>
+    <style>
+	
+	body {
+		background-color: #000;
+		font-size: 14px;
+	}
+    
+    </style>
+    <link href="css/styles-01.css" rel="stylesheet" type="text/css" media="all">
+    
+    <script src="libs/jquery.min.js" type="text/javascript"></script>
+    <script src="libs/underscore/underscore.js" type="text/javascript"></script>
+    <script src="libs/backbone/backbone.js" type="text/javascript"></script>
+    
+    <script src="js/playpause.js"></script>
+	    
+<script>
+
+
+/**
+ * setInterval function increments through 4 steps: 
+ * 1. pause_0
+ * 2. play_1
+ * 3. pause_2
+ * 4. play_3
+ *
+ * notice evens are pause and odds are play
+ * default state of playpause ui is play
+ * the bgCircle element is rotated 90 * increment
+ * @return {[type]} [description]
+ */
+
+// global for now
+var increment = 0; 
+
+var setInt = setInterval(function(){
+  
+  var step = increment % 4;
+  var rotate;
+  var $top = $('#top');
+  var $bottom = $('#bottom');
+  var $rotate = $('#rotate');
+  
+  // console.log(step)
+
+  // pause 0
+  if(step === 0){
+    
+    increment++;
+    rotate = 90 * increment; // 90
+
+    $top.removeClass();
+    $bottom.removeClass();
+
+  	$top.addClass('pauseTop_0');
+  	$bottom.addClass('pauseBottom_0');
+
+   	$rotate.css({transform: 'rotate('+rotate+'deg)'})
+  }
+
+  // play 1
+  else if(step === 1){
+
+    increment++;
+    rotate = 90 * increment; // 180
+
+    $top.removeClass();
+    $bottom.removeClass();
+
+    $top.addClass('playTop_01');
+    $bottom.addClass('playBottom_01');
+	
+    $rotate.css({transform: 'rotate('+rotate+'deg)'})
+    
+  }
+
+  // pause 2
+  else if(step === 2){
+
+    increment++;
+    rotate = 90 * increment; // 270
+
+    $top.removeClass();
+    $bottom.removeClass();
+
+    $top.addClass('pauseTop_02');
+    $bottom.addClass('pauseBottom_02');
+
+    $rotate.css({transform: 'rotate('+rotate+'deg)'})
+  
+  }
+  // play 3, same as initial state
+  else if(step === 3){
+
+    increment++;
+    rotate = 90 * increment; // 360
+
+    $top.removeClass();
+    $bottom.removeClass();
+
+    $rotate.css({transform: 'rotate('+rotate+'deg)'})
+  
+  }
+}, 2000);
+
+</script>
+  </head>
+  <body>
+  	<div id="bgCircle">
+		<div id="rotate">
+			<div id="top"></div>
+			<div id="bottom"></div>
+		</div>
+	</div>
+  </body>
+</html>
