@@ -1,3 +1,3 @@
 # playpause
 
-A play/paus
+A play/pause widget for music players
