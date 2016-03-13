@@ -1,5 +1,10 @@
+body {
+	background-color: #000;
+	font-size: 8px;
+}
+
 div {
-	transition: all .1s cubic-bezier(0.35, 0.02, .20, .5)
+	transition: all .15s cubic-bezier(0.35, 0.02, .20, .5)
 }
 
 div#bgCircle {
@@ -16,7 +21,7 @@ div#bgCircleGradient1{
 	width: 12em;
 	height: 12em;
 	border-radius: 50%;
-	border: .4em #fff solid;
+	border: none;
 	background-image: radial-gradient(#fff, #000);
 	opacity: 0;
 }
@@ -24,7 +29,7 @@ div#bgCircleGradient1{
 
 @keyframes Radial{
 	0%{opacity: 0}
-	50%{opacity: .5}
+	50%{opacity: .4}
 	100%{opacity: 0}
 }
 

@@ -14,7 +14,7 @@ $('document').ready(function(){
   })
   function togglePlayPause(){
 
-	$('#bgCircleGradient1').css({'animation': 'Radial .1s ease'})  	
+	$('#bgCircleGradient1').css({'animation': 'Radial .15s ease'})  	
 
     if(incr % 4 === 1){
       $top.removeClass();
