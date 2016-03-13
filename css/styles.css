@@ -5,7 +5,7 @@ body {
 div {
   transition: all 0.15s cubic-bezier(0.35, 0.02, 0.2, 0.5);
 }
-div#bgCircle {
+#bgCircle {
   position: absolute;
   width: 12em;
   height: 12em;
@@ -13,7 +13,7 @@ div#bgCircle {
   border-radius: 50%;
   border: .4em #fff solid;
 }
-div#bgCircleGradient1 {
+#bgCircleGradient1 {
   position: absolute;
   width: 12em;
   height: 12em;
@@ -34,7 +34,7 @@ div#bgCircleGradient1 {
     opacity: 0;
   }
 }
-div#top {
+#top {
   position: relative;
   width: 0;
   height: 0;
@@ -45,7 +45,7 @@ div#top {
   border-top: 3em solid transparent;
   border-bottom: 0 solid transparent;
 }
-div#bottom {
+#bottom {
   position: relative;
   width: 0;
   top: 0;
