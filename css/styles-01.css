@@ -3,12 +3,29 @@ div {
 }
 
 div#bgCircle {
-	position: relative;
+	position: absolute;
 	width: 12em;
 	height: 12em;
 	background-color: black;
 	border-radius: 50%;
 	border: .4em #fff solid;
+}
+
+div#bgCircleGradient1{
+	position: absolute;
+	width: 12em;
+	height: 12em;
+	border-radius: 50%;
+	border: .4em #fff solid;
+	background-image: radial-gradient(#fff, #000);
+	opacity: 0;
+}
+
+
+@keyframes Radial{
+	0%{opacity: 0}
+	50%{opacity: .5}
+	100%{opacity: 0}
 }
 
 div#top {

@@ -8,9 +8,14 @@ $('document').ready(function(){
   var $bottom = $('#bottom');
   var $rotate = $('#rotate');
 
-  $bgCircle.on('click', togglePlayPause);
-
+  $('#bgCircleGradient1').on('click', togglePlayPause)
+  $('#bgCircleGradient1').on('animationend', function(){
+  	$(this).css({'animation': ''});
+  })
   function togglePlayPause(){
+
+	$('#bgCircleGradient1').css({'animation': 'Radial .1s ease'})  	
+
     if(incr % 4 === 1){
       $top.removeClass();
       $bottom.removeClass();
