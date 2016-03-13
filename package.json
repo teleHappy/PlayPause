@@ -1,0 +1,28 @@
+{
+  "name": "playpause",
+  "version": "1.0.0",
+  "description": "A play/pause widget for music players",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "jshint": "^2.9.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://teleHappy@github.com/teleHappy/playpause.git"
+  },
+  "author": "Rick Dillon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teleHappy/playpause/issues"
+  },
+  "homepage": "https://github.com/teleHappy/playpause"
+}
