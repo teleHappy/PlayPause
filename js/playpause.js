@@ -1,7 +1,8 @@
 $('document').ready(function(){
 
-  var step = increment = rotate = 0; // 4 possible steps based on increment % 4
-  var incremental = 1;
+  var step = 0; // 4 possible steps based on increment % 4
+  var rotate = 0;
+  var incr = 1;
   var $bgCircle = $('#bgCircle');
   var $top = $('#top');
   var $bottom = $('#bottom');
@@ -9,69 +10,44 @@ $('document').ready(function(){
 
   $bgCircle.on('click', togglePlayPause);
 
-  function reset(){
-    step = increment = rotate = 0;
-    
-    $top.removeClass();
-    $bottom.removeClass();
-
-    $rotate.css({transform: 'rotate('+rotate+'deg)'});
-  }
-
   function togglePlayPause(){
-    // default state is play0 - user or system has not yet initiated playback
-   // debugger
-    if(incremental%4 === 1){
-
-      rotate = 90 * incremental;
-
+    if(incr % 4 === 1){
       $top.removeClass();
       $bottom.removeClass();
+      rotate = 90 * incr; //90
 
       $top.addClass('pauseTop_0');
       $bottom.addClass('pauseBottom_0');
-
-      $rotate.css({transform: 'rotate('+rotate+'deg)'})
-
+      $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
-    if(incremental%4 === 2){
-
-      rotate = 90 * incremental; // 180
-
+    if(incr % 4 === 2){
       $top.removeClass();
       $bottom.removeClass();
+      rotate = 90 * incr; // 180
 
       $top.addClass('playTop_01');
       $bottom.addClass('playBottom_01');
-
-      $rotate.css({transform: 'rotate('+rotate+'deg)'})
-
+      $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
-    if(incremental%4 === 3){
-
-      rotate = 90 * incremental; // 270
-
+    if(incr % 4 === 3){
       $top.removeClass();
       $bottom.removeClass();
+      rotate = 90 * incr; // 270
 
       $top.addClass('pauseTop_02');
       $bottom.addClass('pauseBottom_02');
-
-      $rotate.css({transform: 'rotate('+rotate+'deg)'})
-
+      $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
-    if(incremental%4 === 0){
-
-      rotate = 90 * incremental; // 360
-
+    if(incr % 4 === 0){
       $top.removeClass();
       $bottom.removeClass();
+      rotate = 90 * incr; // 360
 
-      $rotate.css({transform: 'rotate('+rotate+'deg)'})
-
+      $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
 
-    incremental++;
+    incr++;
+  
   }
 
 });
