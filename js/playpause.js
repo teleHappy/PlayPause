@@ -21,8 +21,8 @@ $('document').ready(function(){
       $bottom.removeClass();
       rotate = 90 * incr; //90
 
-      $top.addClass('pauseTop_0');
-      $bottom.addClass('pauseBottom_0');
+      $top.addClass('pauseTop_step_1');
+      $bottom.addClass('pauseBottom_step_1');
       $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
     if(incr % 4 === 2){
@@ -30,8 +30,8 @@ $('document').ready(function(){
       $bottom.removeClass();
       rotate = 90 * incr; // 180
 
-      $top.addClass('playTop_01');
-      $bottom.addClass('playBottom_01');
+      $top.addClass('playTop_step_2');
+      $bottom.addClass('playBottom_step_2');
       $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
     if(incr % 4 === 3){
@@ -39,8 +39,8 @@ $('document').ready(function(){
       $bottom.removeClass();
       rotate = 90 * incr; // 270
 
-      $top.addClass('pauseTop_02');
-      $bottom.addClass('pauseBottom_02');
+      $top.addClass('pauseTop_step_3');
+      $bottom.addClass('pauseBottom_step_3');
       $rotate.css({transform: 'rotate('+rotate+'deg)'});
     }
     if(incr % 4 === 0){
