@@ -1,15 +1,26 @@
-@background-color: #908E8E;
-@grad-fg: #c0c0c0;
-@grad-bg: #908E8E;
+@background-color: #b3cde0;
+@grad-fg: #b3cde0;
+@grad-bg: #03396c;
 @circle-border-color: #fff;
+@header-color: #fff;
+@links: #005b96;
 
 body {
 	background-color: @background-color;
-	font-size: 10px;
+	font-size: 12px;
+	font-family: helvetica;
 }
 
 div {
 	transition: all .15s cubic-bezier(0.35, 0.02, .20, .5)
+}
+
+h1, h2 {
+	color: @header-color;
+}
+
+a{
+	color: @links;
 }
 
 #circle(){
@@ -18,16 +29,16 @@ div {
 	height: 12em;
 	background-color: @background-color;
 	border-radius: 50%;
+	border: .4em @circle-border-color solid;
 }
 
 #bgCircle {
 	#circle;
-	border: .4em @circle-border-color solid;
+	
 }
 
 #bgCircleGradient1{
 	#circle;
-	border: none;
 	background-image: radial-gradient(@grad-fg, @grad-bg);
 	opacity: 0;
 }

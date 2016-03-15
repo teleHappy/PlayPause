@@ -1,15 +1,23 @@
 body {
-  background-color: #908E8E;
-  font-size: 10px;
+  background-color: #b3cde0;
+  font-size: 12px;
+  font-family: helvetica;
 }
 div {
   transition: all 0.15s cubic-bezier(0.35, 0.02, 0.2, 0.5);
+}
+h1,
+h2 {
+  color: #fff;
+}
+a {
+  color: #005b96;
 }
 #bgCircle {
   position: absolute;
   width: 12em;
   height: 12em;
-  background-color: #908E8E;
+  background-color: #b3cde0;
   border-radius: 50%;
   border: 0.4em #fff solid;
 }
@@ -17,10 +25,10 @@ div {
   position: absolute;
   width: 12em;
   height: 12em;
-  background-color: #908E8E;
+  background-color: #b3cde0;
   border-radius: 50%;
-  border: none;
-  background-image: radial-gradient(#c0c0c0, #908E8E);
+  border: 0.4em #fff solid;
+  background-image: radial-gradient(#b3cde0, #03396c);
   opacity: 0;
 }
 @keyframes Radial {
