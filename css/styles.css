@@ -1,5 +1,5 @@
 body {
-  background-color: #b3cde0;
+  background-color: #878C8F;
   font-size: 12px;
   font-family: helvetica;
 }
@@ -17,19 +17,20 @@ a {
   position: absolute;
   width: 12em;
   height: 12em;
-  background-color: #b3cde0;
+  background-color: #878C8F;
   border-radius: 50%;
   border: 0.4em #fff solid;
 }
-#bgCircleGradient1 {
+#bgCircleGradient {
   position: absolute;
   width: 12em;
   height: 12em;
-  background-color: #b3cde0;
+  background-color: #878C8F;
   border-radius: 50%;
   border: 0.4em #fff solid;
-  background-image: radial-gradient(#b3cde0, #03396c);
+  background-image: radial-gradient(#878C8F, #63696C);
   opacity: 0;
+  cursor: pointer;
 }
 @keyframes Radial {
   0% {

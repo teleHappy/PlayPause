@@ -8,13 +8,13 @@ $('document').ready(function(){
   var $bottom = $('#bottom');
   var $rotate = $('#rotate');
 
-  $('#bgCircleGradient1').on('click', togglePlayPause);
-  $('#bgCircleGradient1').on('animationend', function(){
+  $('#bgCircleGradient').on('click', togglePlayPause);
+  $('#bgCircleGradient').on('animationend', function(){
   	$(this).css({'animation': ''});
   });
   function togglePlayPause(){
 
-	$('#bgCircleGradient1').css({'animation': 'Radial .15s ease'});  	
+	$('#bgCircleGradient').css({'animation': 'Radial .1s ease'});  	
 
     if(incr % 4 === 1){
       $top.removeClass();
