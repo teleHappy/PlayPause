@@ -1,20 +1,47 @@
-$('document').ready(function(){
+/**
+ * PlayPause module provides animated transitions between Play and Pause symbols
+ * 
+ * Version: 0.1
+ * 
+ */
 
-  var step = 0; // 4 possible steps based on increment % 4
-  var rotate = 0;
-  var incr = 1;
-  var $bgCircle = $('#bgCircle');
-  var $top = $('#top');
-  var $bottom = $('#bottom');
-  var $rotate = $('#rotate');
+function PlayPause(sr, $){
+  
+  // variables //
+  var rotate,
+      incr,
+      $bgCircle,
+      $top,
+      $bottom,
+      $bgCircleGradient1;
 
-  $('#bgCircleGradient1').on('click', togglePlayPause);
-  $('#bgCircleGradient1').on('animationend', function(){
-  	$(this).css({'animation': ''});
-  });
-  function togglePlayPause(){
-
-	$('#bgCircleGradient1').css({'animation': 'Radial .15s ease'});  	
+  // methods //
+  /**
+   * Initialize the ui and state properties
+   *
+   * @return {[type]} [description]
+   */
+  this.init = function(){
+    rotate = 0;
+    incr = 1;
+    $bgCircle = $(sr.querySelector('#bgCircle'));
+    $top = $(sr.querySelector('#top'));
+    $bottom = $(sr.querySelector('#bottom'));
+    $rotate = $(sr.querySelector('#rotate'));  
+    $bgCircleGradient1 = $(sr.querySelector('#bgCircleGradient1'));
+  };
+ 
+  /**
+   * Rotates the play-pause container element and toggles between pause and play css-rendered styles
+   *
+   * @param  {Object} e Event object
+   *
+   * @return {void}
+   */
+  this.togglePlayPause = function(e){
+  
+    // set up the animation
+    $bgCircleGradient1.css({'animation': 'Radial .15s ease'});   
 
     if(incr % 4 === 1){
       $top.removeClass();
@@ -52,9 +79,9 @@ $('document').ready(function(){
     }
 
     incr++;
-  
   }
+}
 
-});
+  
 	
 
