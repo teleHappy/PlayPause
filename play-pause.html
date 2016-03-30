@@ -1,8 +1,7 @@
-<!--  -->
 
 <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
 
-<script src="libs/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 <script src="js/playpause.js"></script>
 
@@ -44,14 +43,12 @@
         var clone = thatDoc.importNode(template, true);
         shadowRoot.appendChild(clone);
 
-        console.log($(this))
-
-        var s = new PlayPause(this.shadowRoot, $);
-        s.init();
+        var playpause = new PlayPause(this.shadowRoot, $);
+        playpause.init();
 
         // set up event listeners for this web component
         
-        this.addEventListener('click', s.togglePlayPause);
+        this.addEventListener('click', playpause.togglePlayPause);
         this.addEventListener('animationend', function(){
             $(this).css({'animation': ''});
         });
