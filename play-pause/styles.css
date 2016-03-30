@@ -20,6 +20,7 @@
   border: 0.4em #fff solid;
   background-image: radial-gradient(#b3cde0, #03396c);
   opacity: 0;
+  cursor: pointer;
 }
 
 ::shadow #top {
